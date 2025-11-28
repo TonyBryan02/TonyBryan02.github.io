@@ -16,3 +16,18 @@ function randomValueFromArray(array) {
  const places = ['the soup kitchen', 'Disneyland', 'the White House'];
 
  const events = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and slithered away'];
+
+ generateBtn.addEventListener('click', generateStory);
+
+function generateStory() {
+  const storyTemplate = 'It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+  let newStory = storyTemplate;
+
+  const randomCharacter = randomValueFromArray(characters);
+  const randomPlace = randomValueFromArray(places);
+  const randomEvent = randomValueFromArray(events);
+
+  // replace all occurrences of :insertx:
+  newStory = newStory.replace(/:insertx:/g, randomCharacter);
+  newStory = newStory.replace(':inserty:', randomPlace);
+  newStory = newStory.replace(':insertz:', randomEvent);
