@@ -36,3 +36,15 @@ function UpdateDisplayedImage(e){
 }
 
 const baseURL = './Images/';
+
+for (const image of images){
+
+  const newImage = document.createElement('img');
+  
+  newImage.setAttribute('src', image.filename);
+  newImage.setAttribute('alt', image.alt); 
+
+  thumbBar.appendChild(newImage);
+
+  newImage.addEventListener('click', UpdateDisplayedImage);
+}
