@@ -5,7 +5,7 @@ const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
 const images = [
-  {
+{
     filename: 'pic1.jpg',
     alt: 'Human eye close up'
   },
@@ -35,13 +35,13 @@ function UpdateDisplayedImage(e){
   
 }
 
-const baseURL = './Images/';
+const baseURL = './images/';
 
 for (const image of images){
 
   const newImage = document.createElement('img');
   
-  newImage.setAttribute('src', image.filename);
+  newImage.setAttribute('src', baseURL + image.filename);
   newImage.setAttribute('alt', image.alt); 
 
   thumbBar.appendChild(newImage);
