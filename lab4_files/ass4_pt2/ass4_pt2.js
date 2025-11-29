@@ -48,3 +48,21 @@ for (const image of images){
 
   newImage.addEventListener('click', UpdateDisplayedImage);
 }
+
+btn.addEventListener('click', () => {
+  const btnClass = btn.getAttribute('class');
+
+  if (btnClass === 'dark'){
+    btn.setAttribute('class', 'light');
+    btn.textContext = 'Lighten';
+
+    //Set the overlay to a semi-transparent black
+    overlay.style.background = 'rgba(0,0,0,0.5)';
+  } else{
+     btn.setAttribute('class', 'dark');
+    btn.textContext = 'Darken';
+
+    //Set the overlay to a semi-transparent black
+    overlay.style.background = 'rgba(0,0,0,0)';
+  }
+});
