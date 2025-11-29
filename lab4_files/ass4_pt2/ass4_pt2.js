@@ -6,23 +6,33 @@ const overlay = document.querySelector(".overlay");
 
 const images = [
   {
-    filename: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg',
+    filename: 'pic1.jpg',
     alt: 'Human eye close up'
   },
   {
-    filename: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic2.jpg',
+    filename: 'pic2.jpg',
     alt: 'Rock formation close up'
   },
   {
-    filename: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic3.jpg',
+    filename: 'pic3.jpg',
     alt: 'Purple and white flowers'
   },
   {
-    filename: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg',
+    filename: 'pic4.jpg',
     alt: 'Ancient Egyptian art'
   },
   {
-    filename: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg',
+    filename: 'pic5.jpg',
     alt: 'Large moth on a tree leaf'
   }
 ];
+
+//defining the updateDiplayedImage function */
+function UpdateDisplayedImage(e){
+  
+  displayedImage.src = e.target.src;
+  displayedImage.alt = e.target.alt;
+  
+}
+
+const baseURL = './Images/';
